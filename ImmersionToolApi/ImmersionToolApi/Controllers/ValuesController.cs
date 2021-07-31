@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ImmersionToolApi.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,17 @@ namespace ImmersionToolApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly immersion_tool_apiContext _context;
+        public ValuesController(immersion_tool_apiContext dbContext)
+        {
+            _context = dbContext;
+        }
+
         // GET: api/<ValuesController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            var user = _context.Users.FirstOrDefault();
             return new string[] { "value1", "value2" };
         }
 

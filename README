@@ -1,1 +1,1 @@
-Hello world.
+Scaffold-DbContext "Host=localhost;Database=immersion_tool_api;Username=user;Password=pw" Npgsql.EntityFrameworkCore.PostgreSQL -o Models
