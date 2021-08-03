@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ImmersionToolApi.Models
 {
-    public partial class immersion_tool_apiContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
-        public immersion_tool_apiContext()
+        public ApplicationDbContext()
         {
         }
 
-        public immersion_tool_apiContext(DbContextOptions<immersion_tool_apiContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

@@ -13,8 +13,8 @@ namespace ImmersionToolApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly immersion_tool_apiContext _context;
-        public ValuesController(immersion_tool_apiContext dbContext)
+        private readonly ApplicationDbContext _context;
+        public ValuesController(ApplicationDbContext dbContext)
         {
             _context = dbContext;
         }
